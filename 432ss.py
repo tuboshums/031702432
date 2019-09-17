@@ -1,5 +1,5 @@
-import re
 import json
+import re
 
 def get_address(w):##获取地址
     addresss=re.sub(r'\d{11}',"",w)
