@@ -12,8 +12,7 @@ def get_phone(w):##获取电话号码
     return number
 
 def get_Name(w):##获取姓名
-    Names=re.findall("!(\D*.*?),",w)
-    ##Names=re.findall("\D*.*?,(.*?)\,",w) 
+    Names=w[0:w.index(',')]
     return Names
 
 
