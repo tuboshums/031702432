@@ -17,16 +17,6 @@ def get_Name(w):##获取姓名
     return Names
 
 
-def end(w):##将姓名，电话号码，地址以此放进输出中
-    endss=[]
-    name=get_Name(w)
-    number=get_phone(w)
-    addresss=get_address(w)
-    endss.append("".join(name))
-    endss.append("".join(number))
-    endss.append(addresss)
-    return endss
-
 def fall(addresss):
     #匹配省份
     j=re.match(r'.*?(省)',addresss) #省
@@ -86,7 +76,15 @@ def fall(addresss):
     eed.append(d6)
     eed.append(d7)
     return eed
-    
+def end(w):##将姓名，电话号码，地址以此放进输出中
+    endss=[]
+    name=get_Name(w)
+    number=get_phone(w)
+    addresss=get_address(w)
+    endss.append("".join(name))
+    endss.append("".join(number))
+    endss.append(addresss)
+    return endss   
 wen=input()
 endw=end(wen)
 ends=["姓名","手机","地址"]
