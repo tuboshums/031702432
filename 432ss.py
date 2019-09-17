@@ -90,7 +90,6 @@ def fall(addresss):
 wen=input()
 endw=end(wen)
 ends=["姓名","手机","地址"]
-num=[]
 f={}
 for i in range(len(ends)):
     f[ends[i]]=endw[i]
