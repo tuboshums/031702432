@@ -101,7 +101,7 @@ def get_phone(w):##获取电话号码
     return number
 
 def get_Name(w):##获取姓名
-    Names=w[2:w.index(',')]
+    Names=re.findall("!(\D*.*?),",w) 
     return Names
 def end(w):##将姓名，电话号码，地址以此放进输出中
     endss=[]
